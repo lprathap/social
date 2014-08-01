@@ -1,0 +1,2 @@
+module Signed::BaseHelper
+end

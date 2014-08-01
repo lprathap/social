@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> this is base</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<% @posts.each do |post| %>
+		<div class="row well">
+			<%=post.content%>
+		</div>
+		<div class="row well">
+			<%=post.user.email%>
+			
+		</div>
+	<%end%>
+</body>
+</html>

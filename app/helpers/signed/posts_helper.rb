@@ -1,0 +1,2 @@
+module Signed::PostsHelper
+end
