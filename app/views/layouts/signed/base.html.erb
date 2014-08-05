@@ -2,28 +2,23 @@
 <html>
 <head>
   <title> this is base</title>
+  <center><h1><font color="red"> This is Social Networking site</font></h1></center>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="container">
-		<div class="row well">
-			<div class="col-md-3">
-				
-				
-				
+		<div class="row">
+			<div class="col-sm-3">	
+				left pannel
 			</div>
-			<div class="col-md-9">
-				
-			    
+			<div class="col-sm-9">   
 			    <%=yield%>
 			</div>	
 		</div>
 
 	</div>
-
-<%= yield %>
 
 </body>
 </html>
