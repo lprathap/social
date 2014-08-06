@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<div class="row">
-	<%= form_for @post, url: signed_posts_path do |f| %>
-
-	<%= f.text_area :content %> <br>
-
-	<%= f.submit %>
-	<br>
-	<% end %>
-</div>
-
+	<div id="post_form">
+    	<%= render "form" %>
+    </div>
+    <div id="new_posts"></div>
 	<% @posts.each do |post| %>
-		
-			<div class="row pull-right">
-			 
-			  <%= post.created_at %>
-			</div>
-		    <div class="row well">
-			   <%= post.content %> :
-			   <%= post.user.email %> 
-			
-		    </div>
-	
+	<%= render 'post_content', post: post %>
 	<%end%>

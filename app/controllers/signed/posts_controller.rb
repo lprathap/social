@@ -4,13 +4,8 @@ class Signed::PostsController < Signed::BaseController
 		@post = Post.new	
 	end
 	def create
-		@post = current_user.posts.new(post_params)
-
-		if @post.save
-			redirect_to signed_posts_path
-        else
-            render :index
-        end
+		@new_post = current_user.posts.create(post_params)
+        @post = Post.new
     end
     def post_params
         params.require(:post).permit(:content)

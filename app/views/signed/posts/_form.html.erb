@@ -1,0 +1,7 @@
+<div class="row well">
+    <%= form_for @post, url: signed_posts_path, remote: true do |f| %>
+	<%= f.text_area :content %><br>
+	<%= f.submit %>
+	<br>
+	<% end %>
+</div>

@@ -1,0 +1,2 @@
+$("#new_posts").prepend("<%= escape_javascript(render('post_content', post: @new_post)) %> ");
+$("#post_form").html("<%= escape_javascript(render('form')) %> ")
