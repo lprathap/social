@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+	      <th> Email </th>
+	      <th> Status </th>
+	  </tr>
+	</thead>
+	<tbody>
+		<% @friends.each do |friend| %>
+		  <tr> 
+		  	<td><%= friend.email %></td>
+		  	<td> <% if @all_friends.include? friend.id %> 
+		  		   <span class="text-info">"You are friends"</span>
+		  		 <% else %>
+		  		   <span id="friend_btn_<%= friend.id %>"><%= link_to "Friend", friend_signed_friends_path(friend_id: friend.id), remote: true,class: "btn btn-sm btn-success" %></span>
+		  		 <% end %>
+		  	</td>
+		  </tr>
+		<% end %>
+    </tbody>
+</table>

@@ -57,5 +57,9 @@ Rails.application.routes.draw do
   #   end
   namespace:signed do
     resources :posts,except:[:show,:new,:edit]
+    resources :friends, only: [:index] do     collection do
+        get "friend"
+      end
+    end
   end  
 end
